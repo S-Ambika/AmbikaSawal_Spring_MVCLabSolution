@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: MAD_AMBIKA
+Build-Jdk: 16.0.1
+Implementation-Title: StudentRegistrationForDebateEvent Maven Webapp
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.greatLearning
+Implementation-URL: http://localhost:8080
+Created-By: Maven Integration for Eclipse
+
