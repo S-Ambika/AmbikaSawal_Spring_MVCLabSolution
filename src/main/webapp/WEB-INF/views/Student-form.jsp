@@ -26,9 +26,9 @@
 		<h3>Student Detail For Debate Event Directory</h3>
 		<hr>
 
-		<p class="h4 mb-4">Book Employee</p>
+		<p class="h4 mb-4">Employee</p>
 
-		<form action="/RegistrationForDebateEvent/students/save" method="POST">
+		<form action="/StudentRegistrationForDebateEvent/students/save" method="POST">
 
 			<!-- Add hidden form field to handle update -->
 			<input type="hidden" name="id" value="${Student.student_id}" />
@@ -64,7 +64,7 @@
 		</form>
 
 		<hr>
-		<a href="/RegistrationForDebateEvent/students/list">Back to Students List</a>
+		<a href="/StudentRegistrationForDebateEvent/students/list">Back to Students List</a>
 
 	</div>
 </body>

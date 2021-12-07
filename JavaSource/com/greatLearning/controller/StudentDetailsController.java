@@ -34,7 +34,7 @@ public class StudentDetailsController {
 	@RequestMapping("/showFormForAdd")
 	public String showFormForAdd(Model theModel) {
 
-		// create model attribute to bind form data
+		// create model to bind form data
 		Student theStudent = new Student();
 
 		theModel.addAttribute("Student", theStudent);
@@ -48,7 +48,7 @@ public class StudentDetailsController {
 		// get the Book from the service
 		Student theStudent = studentDetailsService.findById(theId);
 
-		// set Book as a model attribute to pre-populate the form
+		// set Book as a model to pre-populate the form
 		theModel.addAttribute("Student", theStudent);
 
 		// send over to our form

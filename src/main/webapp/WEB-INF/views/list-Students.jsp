@@ -40,16 +40,16 @@
 			</thead>
 
 			<tbody>
-				<c:forEach items="${Students}" var="tempBook">
+				<c:forEach items="${Students}" var="tempStu">
 					<tr>
-						<td><c:out value="${tempBook.name}" /></td>
-						<td><c:out value="${tempBook.department}" /></td>
-						<td><c:out value="${tempBook.country}" /></td>
+						<td><c:out value="${tempStu.name}" /></td>
+						<td><c:out value="${tempStu.department}" /></td>
+						<td><c:out value="${tempStu.country}" /></td>
 						<td>
 							<!-- Add "update" button/link --> <a
-							href="/RegistrationForDebateEvent/students/showFormForUpdate?student_id=${tempBook.student_id}"
+							href="/RegistrationForDebateEvent/students/showFormForUpdate?student_id=${tempStu.student_id}"
 							class="btn btn-info btn-sm"> Update </a> <!-- Add "delete" button/link -->
-							<a href="/RegistrationForDebateEvent/students/delete?student_id=${tempBook.student_id}"
+							<a href="/StudentRegistrationForDebateEvent/students/delete?student_id=${tempStu.student_id}"
 							class="btn btn-danger btn-sm"
 							onclick="if (!(confirm('Are you sure you want to delete this student?'))) return false">
 								Delete </a>
