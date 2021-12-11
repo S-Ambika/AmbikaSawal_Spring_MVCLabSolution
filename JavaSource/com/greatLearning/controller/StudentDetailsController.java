@@ -21,7 +21,7 @@ public class StudentDetailsController {
 	StudentDetailsService studentDetailsService;
 
 	@RequestMapping("/list")
-	public String listBooks(Model theModel) {
+	public String listStudents(Model theModel) {
 
 		List<Student> theStudents = studentDetailsService.findAll();
 
@@ -45,10 +45,10 @@ public class StudentDetailsController {
 	@RequestMapping("/showFormForUpdate")
 	public String showFormForUpdate(@RequestParam("student_id") int theId, Model theModel) {
 
-		// get the Book from the service
+		// get the Student from the service
 		Student theStudent = studentDetailsService.findById(theId);
 
-		// set Book as a model to pre-populate the form
+		// set Student as a model to pre-populate the form
 		theModel.addAttribute("Student", theStudent);
 
 		// send over to our form
@@ -56,7 +56,7 @@ public class StudentDetailsController {
 	}
 
 	@PostMapping("/save")
-	public String saveBook(@RequestParam("student_id") int id, @RequestParam("name") String name,
+	public String saveStudent(@RequestParam("student_id") int id, @RequestParam("name") String name,
 			@RequestParam("department") String department, @RequestParam("country") String country) {
 
 		Student theStudent;
@@ -67,7 +67,7 @@ public class StudentDetailsController {
 			theStudent.setCountry(country);
 		} else
 			theStudent = new Student(name, department, country);
-		// save the Book
+		// save the Student
 		studentDetailsService.save(theStudent);
 
 		// use a redirect to prevent duplicate submissions
@@ -78,10 +78,10 @@ public class StudentDetailsController {
 	@RequestMapping("/delete")
 	public String delete(@RequestParam("student_id") int theId) {
 
-		// delete the Book
+		// delete the Student
 		studentDetailsService.deleteById(theId);
 
-		// redirect to /Books/list
+		// redirect to /students/list
 		return "redirect:/students/list";
 
 	}
